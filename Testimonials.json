@@ -1,0 +1,12 @@
+{
+  "name": "Animated Testimonials",
+  "description": "A set of animated testimonial components.",
+  "dependencies": ["framer-motion"],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "components/Testimonials.tsx",
+      "content": "import { motion } from 'framer-motion';\n\nconst Testimonials = () => (\n  <div className=\"testimonials\">\n    <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>\n      \"This is the best product!\"\n    </motion.div>\n  </div>\n);\n\nexport default Testimonials;\n"
+    }
+  ]
+}
