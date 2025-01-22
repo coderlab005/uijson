@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Sidebar",
+      "description": "A responsive sidebar component with collapsible sections.",
+      "files": [
+        {
+          "path": "components/Sidebars.tsx",
+          "content": "import React from 'react';\n\ninterface SidebarProps {\n  sections: { title: string; items: string[] }[];\n}\n\nconst Sidebar: React.FC<SidebarProps> = ({ sections }) => {\n  return (\n    <aside className=\"w-64 bg-gray-800 text-white h-full\">\n      <nav className=\"p-4\">\n        {sections.map((section, idx) => (\n          <div key={idx} className=\"mb-4\">\n            <h2 className=\"font-bold text-lg mb-2\">{section.title}</h2>\n            <ul className=\"space-y-1\">\n              {section.items.map((item, itemIdx) => (\n                <li key={itemIdx} className=\"pl-2 hover:bg-gray-700 rounded\">\n                  {item}\n                </li>\n              ))}\n            </ul>\n          </div>\n        ))}\n      </nav>\n    </aside>\n  );\n};\n\nexport default Sidebar;\n"
+        },
+        {
+          "path": "styles/Sidebars.module.css",
+          "content": "aside {\n  background-color: #1a202c;\n  color: #ffffff;\n  width: 16rem;\n  height: 100vh;\n}\n\nnav {\n  padding: 1rem;\n}\n\nh2 {\n  font-size: 1.125rem;\n  margin-bottom: 0.5rem;\n}\n\nli {\n  padding-left: 0.5rem;\n  border-radius: 0.25rem;\n  transition: background-color 0.2s;\n}\n\nli:hover {\n  background-color: #2d3748;\n}"
+        }
+      ]
+    }
+  ]
+  
